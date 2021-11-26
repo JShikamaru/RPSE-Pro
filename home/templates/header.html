@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <title>Home</title>
+</head>
+<body style="background-color: rgb(177, 202, 109)">
+
+    <section>
+        <a href="{% url 'home:home' %}" id="logo" >Reconocimiento Patrones</a>
+        
+        <input type="checkbox" id="toggle-1">
+        
+        <nav>
+        <ul>
+        <li><a href="{% url 'home:home' %}"><i class="icon-home"></i>Home</a></li>
+        <li><a href="{% url 'about:about' %}"><i class="icon-user"></i>About</a></li>
+        <li><a href="{% url 'contacto:contacto' %}"><i class="icon-phone"></i>Contacto</a></li>
+        <li><a href="{% url 'grafo:grafo' %}"><i class="icon-gear"></i>Grafo</a></li>
+        
+        </ul>
+        </nav>
+        </header>
+        
+    </section>
+        
+
+{% block contenido %}
+
+{% endblock contenido %}
+
+    
+</body>
+</html>

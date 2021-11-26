@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+
+{% block contenido %}
+{% load static %}
+    <h1>JOSE SOTELO ROMAN && IRVING ALDAHIR B.H.</h1>
+    <h2>OCTUBRE MES DEL CANCER DE MAMA</h2>
+
+    <table style="border: 1px black solid", id="racetimes">
+        <thead class="cabecera">
+            <tr style="border: 1px black solid", id="firstrow">
+                <th style="border: 1px black solid",class="bajo">Clave</th>
+                <th style="border: 1px black solid",class="bajo">Color</th>
+                <th style="border: 1px black solid",class="bajo">Temperatura</th>
+                <th style="border: 1px black solid",class="bajo">Inflamación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for elemento in lista %}
+            <tr style="border: 1px black solid">
+                <td style="border: 1px black solid">{{elemento.pk}}</td>
+                <td style="border: 1px black solid">{{elemento.color}}</td>
+                <td style="border: 1px black solid">{{elemento.temperatura}}</td>
+                <td style="border: 1px black solid">{{elemento.inflammation}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock contenido %}

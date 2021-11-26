@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+
+{% block contenido %}
+
+<body >
+
+    <br>
+    <section>
+        <form action="{% url 'grafo:grafoClasifica' %}",method="GET">
+            <h1 id="umbral" >UMBRAL  <input name="umbral",type="text" class="redondeado"><button id="boton">Enviar</button></h1>
+        </form>
+    </section>
+
+    <br>
+    <div >
+        <table  style="border: 1px black solid", id="racetimes">
+            <tbody  class="cabecera">
+                {% for elemento in distancias %}
+                <tr  style="border: 1px black solid", id="firstrow">
+                    {% for distancia in elemento %}
+                        <th id="distancias",style="border: 1px black solid",class="tam" >{{distancia}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+{% endblock contenido %}
